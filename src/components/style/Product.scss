@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.Product {
+    overflow: hidden;
+    background: none;
+    min-height: 100vh;
+    color: black;
+    padding-bottom: 25px;
+    transition: 0.3s all linear;
+
+    .container {
+        margin: 0 auto;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .Product-header-menu {
+        ul {
+            background: white;
+        }
+    }
+
+    .Product-block-main {
+        background: rgb(218, 218, 218);
+    }
+}
+
+.Product-dark {
+    overflow: hidden;
+    background: #242424;
+    min-height: 100vh;
+    color: white;
+    padding-bottom: 25px;
+    transition: 0.3s all linear;
+
+    .container {
+
+        margin: 0 auto;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .Product-header-menu {
+        ul {
+            background: #242424;
+        }
+    }
+
+    .Product-block-main {
+        background: #303030;
+    }
+}
+
+.Product-header-block {
+    padding: 15px 15px 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Product-header-menu {
+    input {
+        display: none;
+
+        &:checked~ul {
+            right: 0;
+        }
+    }
+
+    label {
+        font-size: 25px;
+    }
+
+    ul {
+        position: absolute;
+        right: 100%;
+        display: flex;
+        align-items: start;
+        gap: 50px;
+        padding: 15px;
+        top: 0;
+        justify-content: start;
+        flex-direction: column;
+        background: white;
+        list-style: none;
+        z-index: 5;
+        width: 100%;
+        height: 100vh;
+        transition: 0.3s all linear;
+
+        div {
+            width: 100%;
+        }
+
+        li {
+            line-height: 35px;
+            padding: 5px 0;
+            border-bottom: 1px solid rgb(215, 215, 215);
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    }
+}
+
+.Product-header-back {
+    display: none;
+}
+
+.Product-header-logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.Product-header-search {
+    display: none;
+}
+
+.Product-header-navi {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+        height: 40px;
+    }
+}
+
+
+.Product-block {
+    padding: 0 15px;
+}
+
+.Product-block-main {
+    margin: auto;
+    border-radius: 7px;
+    transition: 0.3s all linear;
+}
+
+.Product-block-main-photos {
+    height: 300px;
+    width: 100%;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.Product-block-main-info {
+    gap: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.Product-main-info-name {
+    h3 {
+        width: 250px;
+        overflow: hidden;
+        max-height: 100px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+}
+
+
+.Product-main-info-navi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+@media only screen and (min-width:768px) {
+
+    .Product-header {
+        border-bottom: 1px solid rgb(78, 78, 78);
+    }
+
+    .Product-header-block {
+        padding: 20px 15px 10px 15px;
+
+    }
+
+    .Product-header-menu {
+        input:checked~ul {
+            right: 60%;
+        }
+
+        ul {
+            width: 300px;
+        }
+    }
+
+    .Product-block {
+        margin-top: 50px;
+    }
+
+    .Product-block-main {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .Product-block-main-photos {
+        flex-basis: 50%;
+    }
+
+    .Product-block-main-info {
+        flex-basis: 47%;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+
+    .Product,
+    .Product-dark {
+        .Product-header-menu {
+            ul {
+                background: none;
+
+                li {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .Product-header-back {
+        display: block;
+
+        a {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: 'Raleway', sans-serif;
+        }
+    }
+
+    .Product-header-menu {
+        display: none;
+
+        label {
+            display: none;
+        }
+
+        ul {
+            background: none;
+            right: 0;
+
+            div {
+                display: flex;
+            }
+
+        }
+
+    }
+
+    .Product-block {
+        width: 900px;
+        margin: 40px auto 0 auto;
+    }
+
+
+
+}
+
+@media only screen and (min-width:1440px) {
+    .Product-block {
+        margin-top: 100px;
+    }
+}

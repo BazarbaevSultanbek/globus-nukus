@@ -116,7 +116,7 @@ function Header() {
                             </div>
                         </div>
                         <div className="Header-search">
-                            <Search placeholder="Search products..." onSearch={onSearch} enterButton />
+                            <Search className={DarkTheme ? "search-dark" : "search-light"} placeholder="Search products..." onSearch={onSearch} enterButton />
 
                         </div>
                         <div className="Header-block" style={{ display: discount_products.length !== 0 ? 'block' : 'none' }}>

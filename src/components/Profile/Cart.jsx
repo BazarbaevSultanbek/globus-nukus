@@ -66,16 +66,16 @@ function Cart() {
                     <ul className="Cart-block-list">
                         {
                             cart.map((product) => (
-                                <li key={product.product.id}>
+                                <li key={product?.product.id}>
                                     <div className='Cart-list-item-photo'>
-                                        <img src={product.product.images[0].image} alt="" />
+                                        <img src={product?.product?.images[0]?.image} alt="" />
                                     </div>
                                     <div className='Card-list-item-info'>
-                                        <span>{product.product.name}</span>
+                                        <span>{product?.product?.name}</span>
                                         <div className='Card-list-info-count'>
-                                            <Button onClick={() => dispatch(addCountProduct({ id: product.product.id, status: 'minus' }))}>-</Button>
-                                            <p>{product.count}</p>
-                                            <Button onClick={() => dispatch(addCountProduct({ id: product.product.id, status: 'plus' }))}>+</Button>
+                                            <Button onClick={() => dispatch(addCountProduct({ id: product?.product?.id, status: 'minus' }))}>-</Button>
+                                            <p>{product?.count}</p>
+                                            <Button onClick={() => dispatch(addCountProduct({ id: product?.product?.id, status: 'plus' }))}>+</Button>
                                         </div>
                                     </div>
                                 </li>

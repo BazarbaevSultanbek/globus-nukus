@@ -4,7 +4,6 @@ import { Notifications } from '@mantine/notifications';
 import Header from './components/Home/Home_header'
 import Login from './components/Login/Login'
 import Categories from './components/Categories/Categories'
-
 import Cart from './components/Profile/Cart';
 import Registration from './components/Registration/Registration'
 import Validation from './components/Registration/Validation'
@@ -16,7 +15,7 @@ import MyCard from './components/Profile/MyCard';
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import '@mantine/carousel/styles.css';
-import './App.css'
+import Product from './components/Product/Product';
 
 function App() {
   return (
@@ -32,6 +31,7 @@ function App() {
           <Route path='/PasswordValidate' element={<PasswordValidate />} />
           <Route path='/Validation' element={<Validation />} />
           <Route path="/Categories" element={<Categories />} />
+          <Route path="/Product/:id" element={<Product />} />
           <Route path="/Cart" element={<Cart />} />
           <Route path='/MyCard' element={<MyCard />} />
           <Route path="/CardValidate" element={<CardValidation />} />

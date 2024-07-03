@@ -12,7 +12,6 @@ function Profile() {
     const DarkTheme = useSelector(state => state?.shop.isDarkMode)
     const dispatch = useDispatch()
 
-    console.log(DarkTheme)
     const [editInfo, setEditInfo] = useState(false)
     const [opened, { open, close }] = useDisclosure(false);
 

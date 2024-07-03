@@ -1,11 +1,13 @@
+import React, { useRef } from 'react';
 import { ShoppingCartOutlined } from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { Carousel } from '@mantine/carousel';
 import { Button } from '@mantine/core';
 import Autoplay from 'embla-carousel-autoplay';
-import React, { useRef } from 'react';
 import { addCountProduct, addProToCart } from '../../store/Reducers/Reducer';
 import { showNotification } from '@mantine/notifications';
+import { IconExternalLink } from '@tabler/icons-react';
+import { Link } from 'react-router-dom';
 
 function Home_products() {
     const products = useSelector(state => state?.shop.products);
@@ -52,10 +54,10 @@ function Home_products() {
                                         </Carousel>
                                     </div>
                                     <div className='Products-block-item-info'>
-                                        <p className='item-info-name'>{item.name}</p>
-                                        <span className='item-info-description'>
-                                            {item.description}
-                                        </span>
+                                        <div className='item-info-name'><h3>{item.name}</h3></div>
+                                        <div className='item-info-description'>
+                                            <p >{item.description}</p>
+                                        </div>
                                         <div className="Products-item-info-navi">
                                             {cart?.some(cartItem => cartItem.product.id === item.id) ? (
                                                 cart?.map(product => {
@@ -81,7 +83,11 @@ function Home_products() {
                                                 })}><ShoppingCartOutlined /></Button>
                                             )}
 
-
+                                            <Button>
+                                                <Link to={`/Product/${item.id}`}>
+                                                    <IconExternalLink />
+                                                </Link>
+                                            </Button>
 
 
 
@@ -115,4 +121,3 @@ function Home_products() {
 }
 
 export default Home_products;
-1

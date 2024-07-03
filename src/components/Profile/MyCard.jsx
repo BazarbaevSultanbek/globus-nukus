@@ -23,8 +23,6 @@ function MyCard() {
 
 
 
-
-
     /// modal close and open 
     const [opened, { open, close }] = useDisclosure(false);
     const [openCard, { open: openCardModal, close: closeCardModal }] = useDisclosure(false);
@@ -52,7 +50,7 @@ function MyCard() {
     const handleChange = (event) => {
         let input = event.target.value.replace(/\D/g, '');
         if (input.length > 2) {
-            input = `${input.slice(0, 2)}/${input.slice(2)}`;
+            input = `${ input.slice(0, 2) } /${input.slice(2)}`;
         }
         setDateCard(input);
     };
@@ -191,4 +189,7 @@ function MyCard() {
     )
 }
 
+
 export default MyCard;
+
+
